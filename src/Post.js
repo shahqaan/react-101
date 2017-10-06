@@ -12,9 +12,9 @@ class Post extends Component {
     let likeButton = null;
 
     if (this.props.post.liked) {
-      likeButton = <a href="#" className="btn btn-primary">Like</a>;
+      likeButton = <a href="#" className="btn btn-primary">Liked</a>;
     } else {
-      likeButton = <a href="#" className="btn btn-outline-primary">Liked</a>;
+      likeButton = <a href="#" className="btn btn-outline-primary">Like</a>;
     }
 
     return (
