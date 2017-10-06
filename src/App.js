@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Posts from './Posts';
+import Navbar from './Navbar';
 import './App.css';
 
 import getPosts from './Posts.Model';
@@ -9,7 +9,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {posts: null};
+    this.state = {posts: []};
   }
 
   componentDidMount() {
@@ -19,11 +19,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-        <div className="App-intro">
+      <div>
+        <Navbar posts={this.state.posts} />
+        <div className="container">
           <Posts posts={this.state.posts}/>
         </div>
       </div>
