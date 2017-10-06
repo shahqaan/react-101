@@ -22,7 +22,9 @@ class App extends Component {
       <div>
         <Navbar posts={this.state.posts} />
         <div className="container">
-          <Posts posts={this.state.posts}/>
+          <div className="row">
+            <Posts posts={this.state.posts}/>
+          </div>
         </div>
       </div>
     );

@@ -9,11 +9,18 @@ export default function getPosts() {
       resolve([{
         id: 1,
         author: "Shahqaan Qasim",
-        message: "Hello World"
+        message: "Hello World",
+        liked: true
       }, {
         id: 2,
-        author: "James Franco",
-        message: "I'm so awesome"
+        author: "Joe Satriani",
+        message: "I'm so awesome",
+        liked: true
+      }, {
+        id: 3,
+        author: "James Hetfield",
+        message: "I wish I could play guitar...",
+        liked: false
       }]);
     }, 1000);
   });

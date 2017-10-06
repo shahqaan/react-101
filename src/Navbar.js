@@ -15,7 +15,7 @@ class Navbar extends Component {
 
            </ul>
            <form className="form-inline my-2 my-lg-0">
-             <button className="btn btn-outline-success navbar-right">{this.props.posts.length}</button>
+             <button className="btn btn-outline-success navbar-right">{this.props.posts.filter(p => p.liked === true).length}</button>
            </form>
          </div>
 
