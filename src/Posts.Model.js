@@ -4,6 +4,8 @@
 
 export default function getPosts() {
 
+  let throttle = 2000;
+
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([{
@@ -22,7 +24,7 @@ export default function getPosts() {
         message: "I wish I could play guitar...",
         liked: false
       }]);
-    }, 1000);
+    }, throttle);
   });
 
 

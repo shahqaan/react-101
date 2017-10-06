@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import Post from './Post';
+import Loader from './Loader';
 
 class Posts extends Component {
 
@@ -17,8 +18,15 @@ class Posts extends Component {
       //   </div>
       // );
     });
-    return <div>{posts}</div>
+    return (
+      <div className="container">
+        <div className="row">
+          <div>{posts}</div>
+        </div>
+      </div>
+
+    );
   }
 }
 
-export default Posts;
+export default Loader(Posts);
