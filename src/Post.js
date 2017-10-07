@@ -7,14 +7,18 @@ import avatar from './avatar.svg';
 
 class Post extends Component {
 
+  handleLike = () => {
+    this.props.handleLike(this.props.post);
+  }
+
   render() {
 
     let likeButton = null;
 
     if (this.props.post.liked) {
-      likeButton = <a href="#" className="btn btn-primary">Liked</a>;
+      likeButton = <button onClick={this.handleLike} className="btn btn-primary">Liked</button>;
     } else {
-      likeButton = <a href="#" className="btn btn-outline-primary">Like</a>;
+      likeButton = <button onClick={this.handleLike} className="btn btn-outline-primary">Like</button>;
     }
 
     return (

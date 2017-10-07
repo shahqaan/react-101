@@ -10,7 +10,7 @@ class Posts extends Component {
   render() {
     const posts = this.props.posts.map(post => {
 
-      return <Post key={post.id} post={post}/>;
+      return <Post key={post.id} post={post} handleLike={this.props.handleUpdate} />;
 
       // return (
       //   <div>

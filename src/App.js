@@ -16,6 +16,12 @@ class App extends Component {
     getPosts().then(posts => this.setState({posts}));
   }
 
+  handleUpdate = (post) => {
+    let likedPostIndex = this.state.posts.findIndex(p => p.id === post.id);
+    this.state.posts[likedPostIndex].liked = true;
+    this.setState({posts: this.state.posts});
+  }
+
 
   render() {
     return (
@@ -23,7 +29,7 @@ class App extends Component {
         <Navbar posts={this.state.posts} />
         <div className="container">
           <div className="row">
-            <Posts posts={this.state.posts}/>
+            <Posts posts={this.state.posts} handleUpdate={this.handleUpdate}/>
           </div>
         </div>
       </div>
